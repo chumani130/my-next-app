@@ -3,17 +3,17 @@ import { prisma } from "./db"
 import { TodoItem } from "./components/TodoItem"
 
 // prisma.todo.create({ data: {title: "test", complete: false } })
-// function getTodos() {
-//   return prisma.todo.findMany()
-// }
-async function getTodos() {
-  try {
-    return await prisma.todo.findMany();
-  } catch (error) {
-    console.error('Error fetching todos:', error);
-    return [];
-  }
+function getTodos() {
+  return prisma.todo.findMany()
 }
+// async function getTodos() {
+//   try {
+//     return await prisma.todo.findMany();
+//   } catch (error) {
+//     console.error('Error fetching todos:', error);
+//     return [];
+//   }
+// }
 
 async function toggleTodo(id: string, complete: boolean) {
   "use server"
