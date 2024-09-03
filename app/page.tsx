@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { prisma } from "./db"
-import { TodoItem } from "./components/TodoItem"
+import TodoItem from "./components/TodoItem"
+
 
 // prisma.todo.create({ data: {title: "test", complete: false } })
 function getTodos() {
